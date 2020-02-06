@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="MappkaMobile.View.ServicePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="Stack" Margin="100" Padding="20">
+
+            <Button x:Name="Empty" 
+                    Clicked="Empty_Clicked"
+                    AutomationId="0"
+                    Image="user1.png" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            <Button x:Name="Low" 
+                    Clicked="Low_Clicked"
+                    AutomationId="1" 
+                    Image="user2.png" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            <Button x:Name="Medium" 
+                    Clicked="Medium_Clicked"
+                    AutomationId="2" 
+                    Image="user3.png" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            <Button x:Name="High" 
+                    Clicked="High_Clicked"
+                    AutomationId="3" 
+                    Image="user4.png" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            <Button x:Name="Full" 
+                    Clicked="Full_Clicked"
+                    AutomationId="4" 
+                    Image="user5.png" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="MappkaMobile.View.FormPage">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="Stack" Padding="40">
+
+                <!-- Token -->
+                <input:AdvancedEntry 
+                    x:Name="VerificationEntry"
+                    Text="641ca996-da3f-4f37-94fb-e8e7fd8d144c"
+                    IsRequired="True"
+                    Title="Kod weryfikacyjny:"
+                    Placeholder="374-d343g-3gdd212-df4"
+                    MinLength="10"
+                    MaxLength="50"
+                    TextColor="Black"
+                    Margin="10" 
+                    CornerRadius="5"
+                    TextChanged="VerificationEntry_TextChanged"/>
+                
+                <!-- Name -->
+                <input:AdvancedEntry 
+                    x:Name="NameEntry"
+                    IsRequired="True"
+                    Title=""
+                    Placeholder="MyCompany"
+                    MaxLength="50"
+                    TextColor="Black"
+                    CornerRadius="5"
+                    Margin="10"/>
+
+                <!-- Type -->
+                <Label x:Name="Type" 
+                       Text="Rodzaj jedzenia:" 
+                       VerticalOptions="CenterAndExpand"/>
+                <Grid x:Name="GridLayout" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                
+                    <input:CheckBox Grid.Column="0" Grid.Row="0" Type="Check"/>
+                    <input:CheckBox Grid.Column="0" Grid.Row="1" Type="Check"/>
+                    <input:CheckBox Grid.Column="0" Grid.Row="2" Type="Check"/>
+                    <input:CheckBox Grid.Column="1" Grid.Row="0" Type="Check"/>
+                    <input:CheckBox Grid.Column="1" Grid.Row="1" Type="Check"/>
+                    <input:CheckBox Grid.Column="1" Grid.Row="2" Type="Check"/>
+                </Grid>
+           
+                <!-- Adress  -->
+                <input:AdvancedEntry 
+                    x:Name="CityEntry"
+                    IsRequired="True"
+                    Title="Miasto:"
+                    Placeholder="Gdynia"
+                    MaxLength="50"
+                    TextColor="Black"
+                    CornerRadius="5"
+                    Margin="10"/>
+
+                <input:AdvancedEntry 
+                    x:Name="StreetEntry"
+                    IsRequired="True"
+                    Title="Ulica:"
+                    Placeholder="Morska"
+                    MaxLength="50"
+                    TextColor="Black"
+                    CornerRadius="5"
+                    Margin="10"/>
+
+                <input:AdvancedEntry 
+                    x:Name="BuildingNumberEntry"
+                    IsRequired="True"
+                    Title="Budynek:"
+                    Placeholder="12"
+                    MaxLength="50"
+                    TextColor="Black"
+                    CornerRadius="5"
+                    Margin="10"/>
+
+                <input:AdvancedEntry 
+                    x:Name="FlatNumberEntry"
+                    IsRequired="True"
+                    Title="Mieszkanie:"
+                    MaxLength="50"
+                    TextColor="Black"
+                    CornerRadius="5"
+                    Margin="10"/>
+
+                <!-- Gallery  -->
+                <Button Text="Dodaj zdjęcie" 
+                        BackgroundColor="Transparent" 
+                        Clicked="Gallery_Clicked"
+                        Margin="10"/>
+                
+                <Button x:Name="Register"
+                        Text="Zarejestruj"
+                        Clicked="Register_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
